@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/TiendaVideoJuego/TiendaVideoJuego.iml" filepath="$PROJECT_DIR$/TiendaVideoJuego/TiendaVideoJuego.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TiendaVideoJuego-main.iml" filepath="$PROJECT_DIR$/.idea/TiendaVideoJuego-main.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/TiendaVideoJuego.iml" filepath="$PROJECT_DIR$/.idea/TiendaVideoJuego.iml" />
+>>>>>>> 4e860e9b8f72a0e8820e6918de8323a880b69d55
     </modules>
   </component>
 </project>

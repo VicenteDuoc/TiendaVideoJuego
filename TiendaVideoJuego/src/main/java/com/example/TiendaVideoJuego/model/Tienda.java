@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+
 @Entity // define que esta clase será una tabla en la base de datos.
 @Table(name = "tienda")//aca se asigna el nombre de la tabla en la base de datos.
 @Data
@@ -35,6 +36,4 @@ public class Tienda {
     protected void setFechaCreacion(){
         fechaCreacion = LocalDateTime.now();
     }
-
-
 }

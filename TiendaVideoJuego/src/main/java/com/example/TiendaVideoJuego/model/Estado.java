@@ -1,5 +1,6 @@
 package com.example.TiendaVideoJuego.model;
 
+
 public enum Estado {
     PENDIENTE,
     PROCESANDO,
