@@ -1,0 +1,5 @@
+CREATE TABLE pago(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    monto NUMERIC,
+    metodo VARCHAR(255)
+)
