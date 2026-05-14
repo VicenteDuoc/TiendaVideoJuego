@@ -1,0 +1,26 @@
+# Maven
+**/target/
+
+# IntelliJ
+.idea/
+**/*.iml
+
+# Git
+.git/
+.gitignore
+
+# Docker
+**/Dockerfile
+docker-compose.yml
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Documentación
+README.md
+*.md

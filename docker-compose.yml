@@ -1,13 +1,138 @@
 services:
+
+  # ========== Base de datos MySQL ==========
   mysql:
     image: mysql:8.0
+    container_name: tiendavideojuego-mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: notificaciones
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./init-databases.sql:/docker-entrypoint-initdb.d/init-databases.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks:
+      - tienda-network
 
+  # ========== Microservicio Notificaciones ==========
+  notificaciones:
+    build:
+      context: .
+      dockerfile: Notificaciones/Dockerfile
+    container_name: tiendavideojuego-notificaciones
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/notificaciones_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8080:8080"
+    networks:
+      - tienda-network
+
+  # ========== Microservicio Producto ==========
+  producto:
+    build:
+      context: .
+      dockerfile: producto/Dockerfile
+    container_name: tiendavideojuego-producto
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/producto_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8081:8081"
+    networks:
+      - tienda-network
+
+  # ========== Microservicio Pago ==========
+  pago:
+    build:
+      context: .
+      dockerfile: pago/Dockerfile
+    container_name: tiendavideojuego-pago
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/pago_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8082:8082"
+    networks:
+      - tienda-network
+
+  # ========== Microservicio Categoria ==========
+  categoria:
+    build:
+      context: .
+      dockerfile: Categoria/Dockerfile
+    container_name: tiendavideojuego-categoria
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/categoria_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8083:8083"
+    networks:
+      - tienda-network
+
+  # ========== Microservicio Calificar ==========
+  calificar:
+    build:
+      context: .
+      dockerfile: Calificar/Dockerfile
+    container_name: tiendavideojuego-calificar
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/calificar_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8084:8084"
+    networks:
+      - tienda-network
+
+  # ========== Microservicio Entrega ==========
+  entrega:
+    build:
+      context: .
+      dockerfile: entrega/Dockerfile
+    container_name: tiendavideojuego-entrega
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/entrega_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8085:8085"
+    networks:
+      - tienda-network
+
+# ========== Volúmenes ==========
 volumes:
   mysql_data:
+    driver: local
+
+# ========== Red interna ==========
+networks:
+  tienda-network:
+    driver: bridge
