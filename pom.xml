@@ -24,6 +24,9 @@
         <module>Notificaciones</module>
         <module>pago</module>
         <module>producto</module>
+        <module>Pedido</module>
+	<module>Registro</module>
+	<module>Autenticacion</module>
     </modules>
 
     <properties>

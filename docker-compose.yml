@@ -144,6 +144,60 @@ services:
       - "8086:8086"
     networks:
       - tienda-network
+  # ========= Microservicio Pedido ============
+  pedido:
+    build:
+      context: .
+      dockerfile: Pedido/Dockerfile
+    container_name: tiendavideojuego-pedido
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/pedido_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8087:8087"
+    networks:
+      - tienda-network
+  # ========= Microservicio Registro ==========
+  registro:
+    build:
+      context: .
+      dockerfile: Registro/Dockerfile
+    container_name: tiendavideojuego-registro
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/registro_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8088:8088"
+    networks:
+      - tienda-network
+  # ========= Microservicio Autenticacion ======
+  autenticacion:
+    build:
+      context: .
+      dockerfile: Autenticacion/Dockerfile
+    container_name: tiendavideojuego-autenticacion
+    depends_on:
+      mysql:
+        condition: service_healthy
+      registro:
+        condition: service_started
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/autenticacion_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      REGISTRO_URL: http://registro:8088
+    ports:
+      - "8089:8089"
+    networks:
+      - tienda-network
 
 # ========== Volúmenes ==========
 volumes:
