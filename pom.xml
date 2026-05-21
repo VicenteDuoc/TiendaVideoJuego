@@ -19,6 +19,7 @@
     <modules>
         <module>Calificar</module>
         <module>Categoria</module>
+        <module>Carrito</module>	
         <module>entrega</module>
         <module>Notificaciones</module>
         <module>pago</module>

@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./init-databases.sql:/docker-entrypoint-initdb.d/init-databases.sql
@@ -124,6 +124,24 @@ services:
       DB_PASSWORD: root
     ports:
       - "8085:8085"
+    networks:
+      - tienda-network
+
+  # ========== Microservicio Carrito ==========
+  carrito:
+    build:
+      context: .
+      dockerfile: Carrito/Dockerfile
+    container_name: tiendavideojuego-carrito
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/carrito_db
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    ports:
+      - "8086:8086"
     networks:
       - tienda-network
 
