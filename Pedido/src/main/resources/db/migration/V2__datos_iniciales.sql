@@ -1,5 +1,0 @@
-INSERT INTO pedido (id_usuario, total, estado, fecha_pedido) VALUES
-(1, 32000.0, 'ENTREGADO', NOW() - INTERVAL 10 DAY),
-(1, 27500.0, 'ENVIADO', NOW() - INTERVAL 1 DAY),
-(2, 79990.0, 'PENDIENTE', NOW()),
-(3, 15000.0, 'CONFIRMADO', NOW() - INTERVAL 2 DAY);
