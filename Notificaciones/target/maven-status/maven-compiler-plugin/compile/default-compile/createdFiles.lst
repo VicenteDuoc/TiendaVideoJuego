@@ -1,0 +1,5 @@
+com\tiendavideojuego\Notificaciones\repository\NotificacionRepository.class
+com\tiendavideojuego\Notificaciones\NotificacionesApplication.class
+com\tiendavideojuego\Notificaciones\controller\NotificacionController.class
+com\tiendavideojuego\Notificaciones\service\NotificacionService.class
+com\tiendavideojuego\Notificaciones\model\Notificacion.class
