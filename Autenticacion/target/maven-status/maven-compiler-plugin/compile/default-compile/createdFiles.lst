@@ -1,0 +1,10 @@
+com\tiendavideojuego\Autenticacion\AutenticacionApplication.class
+com\tiendavideojuego\Autenticacion\service\RegistroClient.class
+com\tiendavideojuego\Autenticacion\controller\AutenticacionController.class
+com\tiendavideojuego\Autenticacion\model\TokenRevocado.class
+com\tiendavideojuego\Autenticacion\service\JwtService.class
+com\tiendavideojuego\Autenticacion\dto\LoginRequest.class
+com\tiendavideojuego\Autenticacion\config\WebClientConfig.class
+com\tiendavideojuego\Autenticacion\dto\UsuarioDTO.class
+com\tiendavideojuego\Autenticacion\repository\TokenRevocadoRepository.class
+com\tiendavideojuego\Autenticacion\service\AutenticacionService.class

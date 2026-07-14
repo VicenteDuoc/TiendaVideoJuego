@@ -1,0 +1,10 @@
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\controller\AutenticacionController.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\AutenticacionApplication.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\dto\LoginRequest.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\service\AutenticacionService.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\config\WebClientConfig.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\dto\UsuarioDTO.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\service\RegistroClient.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\model\TokenRevocado.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\service\JwtService.java
+C:\Users\GAMER\Desktop\TiendaVideoJuego-main\Autenticacion\src\main\java\com\tiendavideojuego\Autenticacion\repository\TokenRevocadoRepository.java
