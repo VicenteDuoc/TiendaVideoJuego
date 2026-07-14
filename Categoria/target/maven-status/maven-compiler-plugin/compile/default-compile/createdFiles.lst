@@ -1,0 +1,5 @@
+com\tiendavideojuego\Categoria\CategoriaApplication.class
+com\tiendavideojuego\Categoria\service\CategoriaService.class
+com\tiendavideojuego\Categoria\repository\CategoriaRepository.class
+com\tiendavideojuego\Categoria\model\Categoria.class
+com\tiendavideojuego\Categoria\controller\CategoriaController.class

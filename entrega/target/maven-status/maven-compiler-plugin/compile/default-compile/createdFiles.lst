@@ -1,0 +1,6 @@
+com\tiendavideojuego\entrega\model\Entrega.class
+com\tiendavideojuego\entrega\controller\EntregaController.class
+com\tiendavideojuego\entrega\repository\EntregaRepository.class
+com\tiendavideojuego\entrega\EntregaApplication.class
+com\tiendavideojuego\entrega\model\Estado.class
+com\tiendavideojuego\entrega\service\EntregaService.class
