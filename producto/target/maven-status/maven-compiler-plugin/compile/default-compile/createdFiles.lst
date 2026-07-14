@@ -1,0 +1,5 @@
+com\tiendavideojuego\producto\service\ProductoService.class
+com\tiendavideojuego\producto\controller\ProductoController.class
+com\tiendavideojuego\producto\ProductoApplication.class
+com\tiendavideojuego\producto\repository\ProductoRepository.class
+com\tiendavideojuego\producto\model\Producto.class

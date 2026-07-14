@@ -1,0 +1,6 @@
+com\tiendavideojuego\Registro\model\Usuario.class
+com\tiendavideojuego\Registro\model\Rol.class
+com\tiendavideojuego\Registro\RegistroApplication.class
+com\tiendavideojuego\Registro\repository\UsuarioRepository.class
+com\tiendavideojuego\Registro\controller\UsuarioController.class
+com\tiendavideojuego\Registro\service\UsuarioService.class
