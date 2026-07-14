@@ -1,0 +1,5 @@
+com\tiendavideojuego\pago\repository\PagoRepository.class
+com\tiendavideojuego\pago\controller\PagoController.class
+com\tiendavideojuego\pago\service\PagoService.class
+com\tiendavideojuego\pago\model\Pago.class
+com\tiendavideojuego\pago\PagoApplication.class

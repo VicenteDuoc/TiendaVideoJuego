@@ -1,0 +1,6 @@
+com\tiendavideojuego\Pedido\controller\PedidoController.class
+com\tiendavideojuego\Pedido\repository\PedidoRepository.class
+com\tiendavideojuego\Pedido\PedidoApplication.class
+com\tiendavideojuego\Pedido\model\Pedido.class
+com\tiendavideojuego\Pedido\model\EstadoPedido.class
+com\tiendavideojuego\Pedido\service\PedidoService.class
