@@ -1,0 +1,5 @@
+com\tiendavideojuego\Carrito\repository\CarritoRepository.class
+com\tiendavideojuego\Carrito\controller\CarritoController.class
+com\tiendavideojuego\Carrito\model\CarritoItem.class
+com\tiendavideojuego\Carrito\CarritoApplication.class
+com\tiendavideojuego\Carrito\service\CarritoService.class

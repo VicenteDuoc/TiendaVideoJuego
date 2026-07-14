@@ -1,0 +1,5 @@
+com\tiendavideojuego\Calificar\CalificarApplication.class
+com\tiendavideojuego\Calificar\service\CalificacionService.class
+com\tiendavideojuego\Calificar\repository\CalificacionRepository.class
+com\tiendavideojuego\Calificar\model\Calificacion.class
+com\tiendavideojuego\Calificar\controller\CalificacionController.class
